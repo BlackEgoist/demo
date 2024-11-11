@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Frontend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div id="register-form" class="form-container">
+        <h2>Register</h2>
+        <input type="text" id="register-username" placeholder="Username" required>
+        <input type="password" id="register-password" placeholder="Password" required>
+        <button onclick="registerUser()">Register</button>
+        <a href="#" onclick="goToLoginForm()">Already registered? Login here</a>
+        <p id="register-message"></p>
+    </div>
+
+    <div id="login-form" class="form-container">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Username" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button onclick="loginUser()">Login</button>
+        <a href="#" onclick="goToRegisterForm()">Register new user</a>
+        <p id="login-message"></p>
+    </div>
+
+    <div id="task-form" class="form-container">
+        <h2>Create Task</h2>
+        <p>Author: <span id="current-user"></span></p>
+        <input type="text" id="task-recipient" placeholder="Recipient Username" required>
+        <textarea id="task-text" placeholder="Task Text" required></textarea>
+        <button onclick="createTask()">Create Task</button>
+        <button onclick="logout()">Logout</button>
+        <p id="task-message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
